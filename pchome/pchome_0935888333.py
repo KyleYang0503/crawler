@@ -22,7 +22,7 @@ try:
     driver = webdriver.Chrome()
     driver.maximize_window()#放大視窗
     #driver.implicitly_wait(20)
-    driver.get('https://www.pcstore.com.tw/sapphiretech/M81406511.htm')
+    driver.get('*')
     #https://www.pcstore.com.tw/sapphiretech/M81063296.htm
     while True:
         #立即購買
@@ -42,42 +42,42 @@ try:
             
     account=driver.find_element_by_id("inpuid")
     account.clear
-    account.send_keys("0935888333") #帳號
+    account.send_keys("*") #帳號
     password=driver.find_element_by_name("userpass")
     password.clear
-    password.send_keys("0503kyle")#密碼
+    password.send_keys("*")#密碼
     driver.find_element_by_xpath("//*[@id='container']/div[5]/table[2]/tbody/tr/td[1]/input").click()
     #登入
 
     #收貨人資料
     time.sleep(1)
-    js = "document.getElementsByName('receiver')[0].value='楊朝凱';"
+    js = "document.getElementsByName('receiver')[0].value='*';"
     driver.execute_script(js)
 
-    js = "document.getElementsByName('rectel')[0].value='0935888333';"
+    js = "document.getElementsByName('rectel')[0].value='*';"
     driver.execute_script(js)
 
-    js = "document.getElementsByName('reczip')[0].value='300';"
+    js = "document.getElementsByName('reczip')[0].value='*';"
     driver.execute_script(js)
  
-    js = "document.getElementsByName('recaddress')[0].value='新竹市東區園後街83號205室';"
+    js = "document.getElementsByName('recaddress')[0].value='*';"
     driver.execute_script(js)
   
      #收貨人資料
     #訂購資料
-    js = "document.getElementsByName('cust_name')[0].value='楊朝凱';"
+    js = "document.getElementsByName('cust_name')[0].value='*';"
     driver.execute_script(js)
 
     js = "document.getElementsByName('cust_sex')[0].value='F';"
     driver.execute_script(js)
     
-    js = "document.getElementsByName('cust_tel')[0].value='0935888333';"
+    js = "document.getElementsByName('cust_tel')[0].value='*';"
     driver.execute_script(js)
 
-    js = "document.getElementsByName('invzip')[0].value='300';"
+    js = "document.getElementsByName('invzip')[0].value='*';"
     driver.execute_script(js)
  
-    js = "document.getElementsByName('invaddress')[0].value='新竹市東區園後街83號205室';"
+    js = "document.getElementsByName('invaddress')[0].value='*';"
     driver.execute_script(js)
   
     try:
@@ -94,25 +94,25 @@ try:
             
     #信用卡資訊
     WebDriverWait(driver,5,0.5).until(EC.presence_of_element_located((By.ID,"cd01")))
-    js="document.getElementById('cd01').value='4477';"
+    js="document.getElementById('cd01').value='****';"
     driver.execute_script(js)
 
-    js="document.getElementById('cd02').value='5787';"
+    js="document.getElementById('cd02').value='****';"
     driver.execute_script(js)
 
-    js="document.getElementById('cd03').value='0853';"
+    js="document.getElementById('cd03').value='****';"
     driver.execute_script(js)
 
-    js="document.getElementById('cd04').value='2909';"
+    js="document.getElementById('cd04').value='****';"
     driver.execute_script(js)
 
-    js="document.getElementById('expire_month').value='04';"
+    js="document.getElementById('expire_month').value='**';"
     driver.execute_script(js)
 
-    js="document.getElementById('expire_year').value='2025';"
+    js="document.getElementById('expire_year').value='****';"
     driver.execute_script(js)
 
-    js="document.getElementById('cvv2no').value='094';"
+    js="document.getElementById('cvv2no').value='***';"
     driver.execute_script(js)
     #certimg
     
